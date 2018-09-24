@@ -13,7 +13,7 @@ resources:
 - name: music-repo
   type: git
   source:
-    uri: https://github.com/akirasoft/spring-music.git
+    uri: https://github.com/kansology/spring-music.git
     branch: master
     username: ((github-username))
     password: ((github-password))
@@ -23,17 +23,17 @@ resources:
   source:
     bucket: ((s3-bucket-name))
     region_name: us-west-2
-    key: workshop99/current-version
+    key: workshop38/current-version
     access_key_id: ((s3-access-key-id))
     secret_access_key: ((s3-secret-access-key))
-    initial_version: 1.0.0
+    initial_version: 1.0.99
 
 - name: music-release
   type: s3
   source:
     bucket: ((s3-bucket-name))
     region_name: us-west-2
-    regexp: workshop99/spring-music-(.*).jar
+    regexp: workshop38/spring-music-(.*).jar
     access_key_id: ((s3-access-key-id))
     secret_access_key: ((s3-secret-access-key))
 
